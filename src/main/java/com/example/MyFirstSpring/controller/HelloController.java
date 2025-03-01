@@ -12,21 +12,27 @@ public class HelloController {
         return "Hello from BridgeLabz";
     }
 
-    // POST Request - Accept name as input
-    @PostMapping
-    public String sayHelloPost(@RequestBody String name) {
-        return "Hello, " + name + "!";
-    }
-
-    // PUT Request - Update name
-    @PutMapping("/{name}")
-    public String sayHelloPut(@PathVariable String name) {
-        return "Updated Hello, " + name + "!";
-    }
-
-    // DELETE Request - Say Goodbye
-    @DeleteMapping("/{name}")
-    public String sayGoodbye(@PathVariable String name) {
-        return "Goodbye, " + name + "!";
-    }
+//    // POST Request - Accept name as input
+//    @PostMapping
+//    public String sayHelloPost(@RequestBody String name) {
+//        return "Hello, " + name + "!";
+//    }
+//
+//    // PUT Request - Update name
+//    @PutMapping("/{name}")
+//    public String sayHelloPut(@PathVariable String name) {
+//        return "Updated Hello, " + name + "!";
+//    }
+//
+//    // DELETE Request - Say Goodbye
+//    @DeleteMapping("/{name}")
+//    public String sayGoodbye(@PathVariable String name) {
+//        return "Goodbye, " + name + "!";
+//    }
+//}
+//GET Request with Query Parameter
+@GetMapping("/query")
+public String sayHello(@RequestParam String name) {
+    return "Hello " + name + " from BridgeLabz!";
+}
 }
