@@ -10,6 +10,7 @@ public class HelloController {
     @GetMapping
     public String sayHello() {
         return "Hello from BridgeLabz";
+        //	http://localhost:8080/hello  --> to run on browser
     }
 
 //    // POST Request - Accept name as input
@@ -34,5 +35,6 @@ public class HelloController {
 @GetMapping("/query")
 public String sayHello(@RequestParam String name) {
     return "Hello " + name + " from BridgeLabz!";
+    //	http://localhost:8080/hello/query?name=archit  --> to run on browserUC_2
 }
 }
