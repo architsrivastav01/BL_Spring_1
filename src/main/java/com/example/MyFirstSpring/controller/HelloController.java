@@ -47,5 +47,8 @@ public String sayHello(@RequestParam String name) {
     public String greetWithRequestBody(@RequestBody Message names){
         return "Hello, "+names.getFirstName()+" "+names.getLastName();
     }
-
+    @PutMapping("put/{firstName}")
+    public String greetWithQueryAndParam(@RequestParam String lastName,@PathVariable String firstName){
+        return "HELLO! "+firstName+" "+lastName;
+}
 }
