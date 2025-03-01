@@ -1,5 +1,6 @@
 package com.example.MyFirstSpring.controller;
 
+import com.example.MyFirstSpring.model.Message;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
@@ -42,4 +43,9 @@ public String sayHello(@RequestParam String name) {
     public String sayHellousingPath(@PathVariable String name) {
         return "Hello " + name + " from BridgeLabz!";
     }
+    @PostMapping("post")
+    public String greetWithRequestBody(@RequestBody Message names){
+        return "Hello, "+names.getFirstName()+" "+names.getLastName();
+    }
+
 }
