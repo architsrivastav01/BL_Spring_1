@@ -37,4 +37,9 @@ public String sayHello(@RequestParam String name) {
     return "Hello " + name + " from BridgeLabz!";
     //	http://localhost:8080/hello/query?name=archit  --> to run on browserUC_2
 }
+    // GET Request with Path Variable
+    @GetMapping("/param/{name}")
+    public String sayHellousingPath(@PathVariable String name) {
+        return "Hello " + name + " from BridgeLabz!";
+    }
 }

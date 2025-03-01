@@ -9,5 +9,5 @@ public class MyFirstSpringApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(MyFirstSpringApplication.class, args);
 	}
-
+//	http://localhost:8080/hello/param/Archit --> to run on browser
 }
